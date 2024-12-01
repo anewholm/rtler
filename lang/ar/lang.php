@@ -2,12 +2,12 @@
 
 return [
     'plugin' => [
-        'name' => 'Acorn Rtler',
-        'description' => 'تغيير تخطيط الواجهة الخلفية إلى RTL',
+        'name' => 'ار تي ال',
+        'description' => 'تغيير تخطيط الواجهة الخلفية إلى ار تي ال',
     ],
     'setting' => [
-        'menu' => 'Rtler',
-        'description' => 'إدارة إعدادات Acorn Rtler.',
+        'menu' => 'ار تي ال',
+        'description' => 'إدارة إعدادات ار تي ال',
         'category' => 'Acorn',
         'layout_mode' => 'تغيير وضع تخطيط الواجهة الخلفية',
         'editor_mode' => 'تغيير وضع محرر الكود',
@@ -19,7 +19,7 @@ return [
         'language_based' => 'بناءً على اللغة',
     ],
     'permissions' => [
-        'tab' => 'Acorn',
-        'label' => 'تغيير إعدادات Rtler'
+        'tab' => 'Translation',
+        'label' => 'تغيير إعدادات ار تي ال'
     ]
 ];

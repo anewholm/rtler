@@ -57,6 +57,7 @@ class Plugin extends PluginBase
             if (!Request::ajax() && UrlGenerator::checkForRtl('layout_mode')) {
                 $controller->addCss(Config::get('cms.pluginsPath') . ('/acorn/rtler/assets/css/rtler.css'));
                 $controller->addJs(Config::get('cms.pluginsPath') . ('/acorn/rtler/assets/js/rtler.min.js'));
+                $controller->bodyClass = "rtl $controller->bodyClass";
             }
         });
     }
