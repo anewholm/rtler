@@ -1,31 +1,31 @@
 fields:
     layout_mode:
-        label: acorn.rtler::lang.setting.layout_mode
+        label: acornassociated.rtler::lang.setting.layout_mode
         type: dropdown
         default: language
         options:
-            never: acorn.rtler::lang.setting.never
-            always: acorn.rtler::lang.setting.always
-            language: acorn.rtler::lang.setting.language_based
+            never: acornassociated.rtler::lang.setting.never
+            always: acornassociated.rtler::lang.setting.always
+            language: acornassociated.rtler::lang.setting.language_based
         span: auto
 
     editor_mode:
-        label: acorn.rtler::lang.setting.editor_mode
+        label: acornassociated.rtler::lang.setting.editor_mode
         type: dropdown
         default: language
         options:
-            never: acorn.rtler::lang.setting.never
-            always: acorn.rtler::lang.setting.always
-            language: acorn.rtler::lang.setting.language_based
+            never: acornassociated.rtler::lang.setting.never
+            always: acornassociated.rtler::lang.setting.always
+            language: acornassociated.rtler::lang.setting.language_based
         span: auto
-        comment: acorn.rtler::lang.setting.editor_mode_comment
+        comment: acornassociated.rtler::lang.setting.editor_mode_comment
     markdown_editor_mode:
-        label: acorn.rtler::lang.setting.markdown_editor_mode
+        label: acornassociated.rtler::lang.setting.markdown_editor_mode
         type: dropdown
         default: language
         options:
-            never: acorn.rtler::lang.setting.never
-            always: acorn.rtler::lang.setting.always
-            language: acorn.rtler::lang.setting.language_based
+            never: acornassociated.rtler::lang.setting.never
+            always: acornassociated.rtler::lang.setting.always
+            language: acornassociated.rtler::lang.setting.language_based
         span: auto
-        comment: acorn.rtler::lang.setting.markdown_editor_mode_comment
+        comment: acornassociated.rtler::lang.setting.markdown_editor_mode_comment
