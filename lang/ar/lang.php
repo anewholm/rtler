@@ -8,7 +8,7 @@ return [
     'setting' => [
         'menu' => 'ار تي ال',
         'description' => 'إدارة إعدادات ار تي ال',
-        'category' => 'AcornAssociated',
+        'category' => 'Acorn',
         'layout_mode' => 'تغيير وضع تخطيط الواجهة الخلفية',
         'editor_mode' => 'تغيير وضع محرر الكود',
         'editor_mode_comment' => 'استخدم Ctrl (Cmd على Mac) + Alt + Shift + (R | L) لجعل السطر RTL أو LTR',

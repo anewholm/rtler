@@ -1,6 +1,6 @@
 <?php
 
-namespace AcornAssociated\Rtler\Classes;
+namespace Acorn\Rtler\Classes;
 
 use File;
 use Cms\Classes\Theme;
@@ -8,7 +8,7 @@ use CSSJanus;
 /**
  * It shifts the controller from right to left
  *
- * @package AcornAssociated\Rtler
+ * @package Acorn\Rtler
  * @author Jaber Rasul
  */
 class CssFlipper

@@ -1,6 +1,6 @@
 <?php
 
-namespace AcornAssociated\Rtler;
+namespace Acorn\Rtler;
 
 use App;
 use Lang;
@@ -8,14 +8,14 @@ use Event;
 use Config;
 use Backend;
 use Request;
-use AcornAssociated\Rtler\Classes\UrlGenerator;
-use AcornAssociated\Rtler\Models\Settings;
+use Acorn\Rtler\Classes\UrlGenerator;
+use Acorn\Rtler\Models\Settings;
 use System\Classes\PluginBase;
 
 /**
  * It shifts the controller from right to left
  *
- * @package AcornAssociated\Rtler
+ * @package Acorn\Rtler
  * @author Jaber Rasul
  */
 class Plugin extends PluginBase
@@ -33,9 +33,9 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'acornassociated.rtler::lang.plugin.name',
-            'description' => 'acornassociated.rtler::lang.plugin.description',
-            'author'      => 'Acorn Associated',
+            'name'        => 'acorn.rtler::lang.plugin.name',
+            'description' => 'acorn.rtler::lang.plugin.description',
+            'author'      => 'Acorn',
             'icon'        => 'icon-anchor'
         ];
     }
@@ -55,8 +55,8 @@ class Plugin extends PluginBase
         // Listen for `backend.page.beforeDisplay` event.
         Event::listen('backend.page.beforeDisplay', function ($controller, $action, $params) {
             if (!Request::ajax() && UrlGenerator::checkForRtl('layout_mode')) {
-                $controller->addCss(Config::get('cms.pluginsPath') . ('/acornassociated/rtler/assets/css/rtler.css'));
-                $controller->addJs(Config::get('cms.pluginsPath') . ('/acornassociated/rtler/assets/js/rtler.min.js'));
+                $controller->addCss(Config::get('cms.pluginsPath') . ('/acorn/rtler/assets/css/rtler.css'));
+                $controller->addJs(Config::get('cms.pluginsPath') . ('/acorn/rtler/assets/js/rtler.min.js'));
                 $controller->bodyClass = "rtl $controller->bodyClass";
             }
         });
@@ -71,9 +71,9 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'acornassociated.rtler.change_settings' => [
-                'tab' => 'acornassociated.rtler::lang.permissions.tab',
-                'label' => 'acornassociated.rtler::lang.permissions.label'
+            'acorn.rtler.change_settings' => [
+                'tab' => 'acorn.rtler::lang.permissions.tab',
+                'label' => 'acorn.rtler::lang.permissions.label'
             ],
         ];
     }
@@ -83,7 +83,7 @@ class Plugin extends PluginBase
 {
     $this->app->singleton('url', function ($app) {
         $routes = $app['router']->getRoutes();
-        $url = new \AcornAssociated\Rtler\Classes\UrlGenerator(
+        $url = new \Acorn\Rtler\Classes\UrlGenerator(
             $routes,
             $app->rebinding(
                 'request',
@@ -112,14 +112,14 @@ class Plugin extends PluginBase
     {
         return [
             'rtler' => [
-                'label'       => 'acornassociated.rtler::lang.setting.menu',
-                'description' => 'acornassociated.rtler::lang.setting.description',
-                'category'    => 'AcornAssociated',
+                'label'       => 'acorn.rtler::lang.setting.menu',
+                'description' => 'acorn.rtler::lang.setting.description',
+                'category'    => 'Acorn',
                 'icon'        => 'icon-anchor',
-                'class'       => 'AcornAssociated\Rtler\Models\Settings',
+                'class'       => 'Acorn\Rtler\Models\Settings',
                 'order'       => 500,
-                'keywords'    => 'acornassociated rtler',
-                'permissions' => ['acornassociated.rtler.change_settings']
+                'keywords'    => 'acorn rtler',
+                'permissions' => ['acorn.rtler.change_settings']
             ]
         ];
     }

@@ -1,5 +1,5 @@
 <?php
-namespace AcornAssociated\Rtler\Classes;
+namespace Acorn\Rtler\Classes;
 
 use Illuminate\Routing\RouteCollection;
 use Illuminate\Http\Request;
@@ -7,7 +7,7 @@ use Winter\Storm\Router\UrlGenerator as WinterUrlGenerator;
 use App;
 use File;
 use Config;
-use AcornAssociated\Rtler\Models\Settings;
+use Acorn\Rtler\Models\Settings;
 use RainLab\Translate\Classes\Translator;
 use Backend\Models\Preference as BackendPreference;
 use Illuminate\Support\Facades\Lang;
@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Lang;
 /**
  * It shifts the controller from right to left
  *
- * @package AcornAssociated\Rtler
+ * @package Acorn\Rtler
  * @author Jaber Rasul
  */
 class UrlGenerator extends WinterUrlGenerator
@@ -61,16 +61,16 @@ class UrlGenerator extends WinterUrlGenerator
         if ($this->isValidUrl($path)) return $path;
         if (self::checkForRtl('editor_mode') || self::checkForRtl('markdown_editor_mode')) {
             if (strpos($path, 'modules/backend/formwidgets/codeeditor/assets/js/build-min.js')) {
-                return parent::asset('/plugins/acornassociated/rtler/assets/js/codeeditor.min.js');
+                return parent::asset('/plugins/acorn/rtler/assets/js/codeeditor.min.js');
             }
         }
         if (self::checkForRtl('markdown_editor_mode')) {
             if (strpos($path, 'modules/backend/formwidgets/markdowneditor/assets/js/markdowneditor.js')) {
-                return parent::asset('/plugins/acornassociated/rtler/assets/js/markdowneditor.js');
+                return parent::asset('/plugins/acorn/rtler/assets/js/markdowneditor.js');
             }
         }
         if (self::checkForRtl('layout_mode')) {
-            if (!strpos($path, '/acornassociated/rtler/assets/css/rtler.css')) {
+            if (!strpos($path, '/acorn/rtler/assets/css/rtler.css')) {
                 $backendUri = Config::get('cms.backendUri', 'backend');
                 $requestUrl = $this->request->url();
                 $rtlFilePath = base_path(dirname($path)) . '/' . pathinfo($path, PATHINFO_FILENAME) . '.rtl.' . File::extension($path);
@@ -97,7 +97,7 @@ class UrlGenerator extends WinterUrlGenerator
         if ($this->isValidUrl($path)) {
             return $path;
         }
-        if (!strpos($path, '/acornassociated/rtler/assets/css/rtler.css')) {
+        if (!strpos($path, '/acorn/rtler/assets/css/rtler.css')) {
             $backendUri = Config::get('cms.backendUri', 'backend');
             $requestUrl = $this->request->url();
             $rtlFilePath = base_path(dirname($path)) . '/' . pathinfo($path, PATHINFO_FILENAME) . '.rtl.' . File::extension($path);
