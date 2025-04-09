@@ -2,13 +2,13 @@
 
 return [
     'plugin' => [
-        'name' => 'Acorn Rtler',
+        'name' => 'AcornAssociated Rtler',
         'description' => 'Layouta paşve biguherîne bo RTL',
     ],
     'setting' => [
         'menu' => 'Rtler',
-        'description' => 'Mîhengên Acorn Rtler bicîh bikin.',
-        'category' => 'Acorn',
+        'description' => 'Mîhengên AcornAssociated Rtler bicîh bikin.',
+        'category' => 'AcornAssociated',
         'layout_mode' => 'Moda Layouta paşve biguherîne',
         'editor_mode' => 'Moda Layouta edîtorekoda biguherîne',
         'editor_mode_comment' => 'bi karanîna Ctrl (Cmd li ser Mac) + Alt + Shift + (R | L) xêta biguherînin bo RTL an LTR',
@@ -19,7 +19,7 @@ return [
         'language_based' => 'Li gorî Ziman',
     ],
     'permissions' => [
-        'tab' => 'Acorn',
+        'tab' => 'AcornAssociated',
         'label' => 'Mîhengên Rtler biguherîne'
     ]
 ];

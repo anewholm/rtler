@@ -5,8 +5,8 @@ This plugin changes the control panel from right to left based on the language c
 
 ## Installation
 
-You can install the plugin using gitlab acorn.
+You can install the plugin using gitlab acornassociated.
 
 ```bash
-cd plugins/ ; mkdir -p acorn ; cd acorn ; git clone git@gitlab.acorn.org:office/rtler.git ; cd ../../
+cd plugins/ ; mkdir -p acornassociated ; cd acornassociated ; git clone git@gitlab.acornassociated.org:office/rtler.git ; cd ../../
 ```
