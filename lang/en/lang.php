@@ -7,8 +7,8 @@ return [
     ],
     'setting' => [
         'menu' => 'Rtler',
-        'description' => 'Manage acornassociated Rtler Settings.',
-        'category' => 'acornassociated',
+        'description' => 'Manage acorn Rtler Settings.',
+        'category' => 'acorn',
         'layout_mode' => 'Change backend layout mode',
         'editor_mode' => 'Change code editor layout mode',
         'editor_mode_comment' => 'use ctrl(cmd on mac)+alt+shift+(R|L) to make line rtl or ltr',
@@ -19,7 +19,7 @@ return [
         'language_based' => 'Based on Language',
     ],
     'permissions' => [
-        'tab' => 'acornassociated',
+        'tab' => 'acorn',
         'label' => 'Change Rtler Settings'
     ]
 ];

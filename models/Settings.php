@@ -1,6 +1,6 @@
 <?php
 
-namespace AcornAssociated\Rtler\Models;
+namespace Acorn\Rtler\Models;
 
 use Model;
 
@@ -8,7 +8,7 @@ use Model;
 /**
  * It shifts the controller from right to left
  *
- * @package AcornAssociated\Rtler
+ * @package Acorn\Rtler
  * @author Jaber Rasul
  */
 class Settings extends Model
@@ -16,7 +16,7 @@ class Settings extends Model
     public $implement = ['System.Behaviors.SettingsModel'];
 
     // A unique code
-    public $settingsCode = 'acornassociated_rtler';
+    public $settingsCode = 'acorn_rtler';
 
     // Reference to field configuration
     public $settingsFields = 'fields.yaml';
