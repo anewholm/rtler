@@ -19,7 +19,6 @@ return [
         'language_based' => 'Based on Language',
     ],
     'permissions' => [
-        'tab' => 'acorn',
         'label' => 'Change Rtler Settings'
     ]
 ];

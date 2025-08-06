@@ -72,7 +72,7 @@ class Plugin extends PluginBase
     {
         return [
             'acorn.rtler.change_settings' => [
-                'tab' => 'acorn.rtler::lang.permissions.tab',
+                'tab' => 'acorn::lang.permissions.tab',
                 'label' => 'acorn.rtler::lang.permissions.label'
             ],
         ];
